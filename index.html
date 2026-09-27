@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CAT Control — FTDX10</title>
+<title>CAT Control — Yaesu FTDX10</title>
 
 <style>
 
@@ -18,7 +20,6 @@
   --muted: light-dark(#5d6875, #9ca9b7);
   --border: light-dark(#d9e0e7, #2b3542);
   --accent: light-dark(#b51d25, #ff5964);
-  --accent-2: light-dark(#e9a72c, #ffc857);
 
   --shadow: 0 20px 55px rgba(0,0,0,.12);
 }
@@ -54,18 +55,14 @@ body {
 
 
 #app {
-
   min-height: 100vh;
   background: var(--bg);
-
 }
 
 
 a {
-
   color: inherit;
   text-decoration: none;
-
 }
 
 
@@ -102,7 +99,6 @@ nav {
   gap: 11px;
 
   font-weight: 800;
-
   letter-spacing: -.02em;
 
 }
@@ -119,7 +115,6 @@ nav {
   place-items: center;
 
   color: white;
-
   background: var(--accent);
 
   font-weight: 900;
@@ -134,7 +129,6 @@ nav {
 .navlinks {
 
   display: flex;
-
   gap: 26px;
 
   color: var(--muted);
@@ -145,9 +139,7 @@ nav {
 
 
 .navlinks a:hover {
-
   color: var(--text);
-
 }
 
 
@@ -157,17 +149,14 @@ nav {
 
 .hero {
 
-  padding: 82px 0 72px;
+  padding: 82px 0 55px;
 
-  display: grid;
+}
 
-  grid-template-columns:
-    1.05fr
-    .95fr;
 
-  gap: 60px;
+.hero-text {
 
-  align-items: center;
+  max-width: 850px;
 
 }
 
@@ -201,7 +190,7 @@ h1 {
   margin:
     0 0 24px;
 
-  max-width: 700px;
+  max-width: 800px;
 
 }
 
@@ -214,7 +203,7 @@ h1 {
 
   color: var(--muted);
 
-  max-width: 650px;
+  max-width: 750px;
 
   margin:
     0 0 30px;
@@ -264,19 +253,21 @@ h1 {
 
 
 .btn.secondary {
-
   background: var(--surface);
-
 }
 
 
 /* ============================================================
-   REAL CAT CONTROL SCREENSHOT
+   SCREENSHOT
    ============================================================ */
 
 .program-screenshot {
 
   width: 100%;
+
+  margin-top: 48px;
+
+  text-align: center;
 
 }
 
@@ -287,7 +278,11 @@ h1 {
 
   width: 100%;
 
+  max-width: 1100px;
+
   height: auto;
+
+  margin: 0 auto;
 
   border-radius: 12px;
 
@@ -295,6 +290,17 @@ h1 {
     1px solid var(--border);
 
   box-shadow: var(--shadow);
+
+}
+
+
+.screenshot-caption {
+
+  margin-top: 13px;
+
+  color: var(--muted);
+
+  font-size: 13px;
 
 }
 
@@ -313,7 +319,7 @@ section {
 
 .section-head {
 
-  max-width: 720px;
+  max-width: 760px;
 
   margin-bottom: 38px;
 
@@ -383,7 +389,6 @@ section {
   background: var(--surface-2);
 
   display: grid;
-
   place-items: center;
 
   color: var(--accent);
@@ -450,9 +455,7 @@ section {
 
 
 .panel h3 {
-
   margin-top: 0;
-
 }
 
 
@@ -491,7 +494,6 @@ section {
   color: white;
 
   display: grid;
-
   place-items: center;
 
   font-weight: 800;
@@ -533,16 +535,12 @@ section {
 
 
 .codebox .red {
-
   color: #ff727b;
-
 }
 
 
 .codebox .gold {
-
   color: #f4c15c;
-
 }
 
 
@@ -622,56 +620,42 @@ footer {
 @media (max-width: 800px) {
 
   .navlinks {
-
     display: none;
-
-  }
-
-
-  .hero,
-  .showcase {
-
-    grid-template-columns: 1fr;
-
   }
 
 
   .hero {
-
     padding-top: 55px;
+  }
 
-    gap: 35px;
 
+  .program-screenshot {
+    margin-top: 35px;
   }
 
 
   .features {
-
     grid-template-columns: 1fr;
+  }
 
+
+  .showcase {
+    grid-template-columns: 1fr;
   }
 
 
   section {
-
-    padding:
-      58px 0;
-
+    padding: 58px 0;
   }
 
 
   .cta {
-
-    padding:
-      32px 22px;
-
+    padding: 32px 22px;
   }
 
 
   footer {
-
     flex-direction: column;
-
   }
 
 }
@@ -683,9 +667,7 @@ footer {
 
 <body>
 
-
 <div id="app">
-
 
 <div class="container">
 
@@ -695,7 +677,6 @@ footer {
      ========================================================== -->
 
 <nav>
-
 
 <a
   class="brand"
@@ -715,11 +696,11 @@ footer {
 
 <div class="navlinks">
 
-  <a href="#recursos">
+  <a href="#features">
     Features
   </a>
 
-  <a href="#como-funciona">
+  <a href="#how-it-works">
     How it works
   </a>
 
@@ -728,7 +709,6 @@ footer {
   </a>
 
 </div>
-
 
 </nav>
 
@@ -744,8 +724,7 @@ footer {
 <section class="hero">
 
 
-<div>
-
+<div class="hero-text">
 
 <div class="eyebrow">
 
@@ -767,9 +746,9 @@ footer {
 
 <p>
 
-  A lightweight, straightforward program for controlling your radio
-  from your computer, monitoring frequency and mode, and keeping
-  the controls you actually use during operation in one place.
+  A lightweight CAT control application for the Yaesu FTDX10,
+  designed to provide quick access to the functions that matter
+  during real HF operation.
 
 </p>
 
@@ -789,7 +768,7 @@ footer {
 
 <a
   class="btn secondary"
-  href="#recursos"
+  href="#features"
 >
 
   Explore the project
@@ -799,19 +778,24 @@ footer {
 
 </div>
 
-
 </div>
 
 
 
-<!-- REAL SCREENSHOT -->
+<!-- REAL CAT CONTROL SCREENSHOT -->
 
 <div class="program-screenshot">
 
   <img
     src="screen001.png"
-    alt="FTDX10 CAT Control running on Windows"
+    alt="CAT Control application running with a Yaesu FTDX10"
   >
+
+  <div class="screenshot-caption">
+
+    CAT Control connected to a Yaesu FTDX10
+
+  </div>
 
 </div>
 
@@ -824,27 +808,24 @@ footer {
      FEATURES
      ========================================================== -->
 
-<section id="recursos">
+<section id="features">
 
 
 <div class="section-head">
 
-
 <h2>
 
-  Built for operators, not complications.
+  Built for real HF operation.
 
 </h2>
 
 
 <p>
 
-  The project was born from real-world HF operation and is being
-  built step by step, with a focus on useful controls, quick
-  response, and a clean interface.
+  CAT Control provides direct access to frequently used FTDX10
+  functions while keeping the radio and computer synchronized.
 
 </p>
-
 
 </div>
 
@@ -853,168 +834,146 @@ footer {
 <div class="features">
 
 
-<article class="feature">
+<!-- FREQUENCY -->
 
+<article class="feature">
 
 <div class="icon">
   F
 </div>
 
-
 <h3>
-
   Real-time frequency
-
 </h3>
-
 
 <p>
 
-  Monitor and change the frequency directly from the interface,
-  keeping the radio and computer synchronized.
+  Monitor the current VFO A frequency in real time and change
+  frequency directly from the computer interface.
 
 </p>
-
 
 </article>
 
 
 
-<article class="feature">
+<!-- MODE -->
 
+<article class="feature">
 
 <div class="icon">
   M
 </div>
 
-
 <h3>
-
-  Modes and VFO
-
+  Mode control
 </h3>
-
 
 <p>
 
-  Control essential radio functions without having to switch
-  between multiple windows.
+  Change operating modes directly from CAT Control, including
+  LSB, USB, CW, FM and AM.
 
 </p>
-
 
 </article>
 
 
 
-<article class="feature">
+<!-- DSP -->
 
+<article class="feature">
 
 <div class="icon">
   D
 </div>
 
-
 <h3>
-
   DSP controls
-
 </h3>
-
 
 <p>
 
-  A dedicated panel for features such as DNR and other controls
-  being added to the project.
+  Direct control of useful FTDX10 DSP functions such as DNR,
+  SHIFT and WIDTH without navigating radio menus.
 
 </p>
-
 
 </article>
 
 
 
-<article class="feature">
+<!-- CAT -->
 
+<article class="feature">
 
 <div class="icon">
   C
 </div>
 
-
 <h3>
-
-  True CAT control
-
+  Two-way CAT communication
 </h3>
-
 
 <p>
 
-  Serial communication with the radio and continuous updates
-  of the states that matter during operation.
+  CAT Control communicates continuously with the FTDX10 through
+  the USB CAT interface, keeping frequency and operating state
+  synchronized.
 
 </p>
-
 
 </article>
 
 
 
-<article class="feature">
+<!-- FREQUENCY MARKING -->
 
+<article class="feature">
 
 <div class="icon">
   Q
 </div>
 
-
 <h3>
-
-  Frequency-based logging
-
+  Frequency marking
 </h3>
-
 
 <p>
 
-  Information associated with a frequency can be stored and
-  automatically recalled during operation.
+  Mark interesting frequencies, identify stations and move
+  quickly between previously marked frequencies during operation.
 
 </p>
-
 
 </article>
 
 
+
+<!-- CALLSIGN -->
 
 <article class="feature">
 
-
 <div class="icon">
-  +
+  ID
 </div>
 
-
 <h3>
-
-  Evolving project
-
+  Callsign memory
 </h3>
-
 
 <p>
 
-  New features are added as real needs arise in the shack.
+  Associate a callsign with the current frequency. The information
+  is stored and automatically recalled when you return to that
+  frequency.
 
 </p>
-
 
 </article>
 
 
 </div>
-
 
 </section>
 
@@ -1024,26 +983,24 @@ footer {
      HOW IT WORKS
      ========================================================== -->
 
-<section id="como-funciona">
+<section id="how-it-works">
 
 
 <div class="section-head">
 
-
 <h2>
 
-  From radio to screen in just a few steps.
+  Radio and computer working together.
 
 </h2>
 
 
 <p>
 
-  The goal is to keep setup simple and put the operating experience
-  at the center.
+  CAT Control communicates directly with the Yaesu FTDX10
+  through its USB CAT interface.
 
 </p>
-
 
 </div>
 
@@ -1054,11 +1011,8 @@ footer {
 
 <div class="panel">
 
-
 <h3>
-
   Basic workflow
-
 </h3>
 
 
@@ -1067,24 +1021,21 @@ footer {
 
 <div class="step">
 
-
 <span class="num">
   1
 </span>
 
-
 <p>
 
   <strong>
-    Connect the radio
+    Connect the FTDX10
   </strong>
 
   <br>
 
-  Use the equipment's CAT/USB interface.
+  Connect the radio to the computer through USB.
 
 </p>
-
 
 </div>
 
@@ -1092,11 +1043,9 @@ footer {
 
 <div class="step">
 
-
 <span class="num">
   2
 </span>
-
 
 <p>
 
@@ -1106,10 +1055,9 @@ footer {
 
   <br>
 
-  Select the port and radio parameters.
+  Select the FTDX10 CAT COM port and connect.
 
 </p>
-
 
 </div>
 
@@ -1117,11 +1065,9 @@ footer {
 
 <div class="step">
 
-
 <span class="num">
   3
 </span>
-
 
 <p>
 
@@ -1131,16 +1077,15 @@ footer {
 
   <br>
 
-  Frequency and key states follow the radio.
+  Frequency, mode and supported controls remain synchronized
+  with the radio.
 
 </p>
 
-
 </div>
 
 
 </div>
-
 
 </div>
 
@@ -1148,11 +1093,8 @@ footer {
 
 <div class="panel">
 
-
 <h3>
-
-  Integration
-
+  Current controls
 </h3>
 
 
@@ -1160,7 +1102,7 @@ footer {
 
 
 <span class="gold">
-  Radio
+  Yaesu FTDX10
 </span>
 
 → USB / CAT →
@@ -1174,57 +1116,75 @@ footer {
 
 
 <span class="gold">
-  FTDX10
+  VFO A
 </span>
 
-· Frequency
+· Frequency control
 
 
 <br>
 
 
 <span class="gold">
-  FTDX10
+  MODE
 </span>
 
-· Mode
+· LSB / USB / CW / FM / AM
 
 
 <br>
 
 
 <span class="gold">
-  FTDX10
+  DSP
 </span>
 
-· VFO / controls
+· DNR / SHIFT / WIDTH
 
 
 <br>
 
 
 <span class="gold">
-  FTDX10
+  MARK
 </span>
 
-· DSP / DNR
+· Store interesting frequencies
+
+
+<br>
+
+
+<span class="gold">
+  QSO DONE
+</span>
+
+· Mark completed contacts
+
+
+<br>
+
+
+<span class="gold">
+  CALLSIGN
+</span>
+
+· Store station information by frequency
 
 
 <br><br>
 
 
-Also designed to work alongside shack tools such as
-Log4OM, Hamlib, and N1MM+.
+Designed to complement the physical controls of the FTDX10
+during HF operation.
 
+
+</div>
 
 </div>
 
 
 </div>
-
-
-</div>
-
 
 </section>
 
@@ -1239,19 +1199,18 @@ Log4OM, Hamlib, and N1MM+.
 
 <div class="cta">
 
-
 <h2>
 
-  The project is starting to leave the shack.
+  CAT Control is under active development.
 
 </h2>
 
 
 <p>
 
-  This page is the initial presentation of CAT Control.
-  Future updates may include downloads, versions, a manual,
-  changelog, screenshots, and information about compatible radios.
+  The project is being developed and tested with the Yaesu FTDX10.
+  Downloads, new versions, documentation and additional features
+  will be published here as the project evolves.
 
 </p>
 
@@ -1284,9 +1243,7 @@ Log4OM, Hamlib, and N1MM+.
 
 </div>
 
-
 </div>
-
 
 </section>
 
@@ -1301,33 +1258,29 @@ Log4OM, Hamlib, and N1MM+.
 
 <footer>
 
-
 <span>
 
-  CAT Control • independent amateur radio project
+  CAT Control • Independent amateur radio project
 
 </span>
 
 
 <span>
 
-  Developed for HF operation
+  Developed for the Yaesu FTDX10
 
 </span>
-
 
 </footer>
 
 
 </div>
 
-
 </div>
 
 
 
 <script>
-
 
 document
   .getElementById('notify')
@@ -1337,7 +1290,6 @@ document
 
       this.textContent =
         'Download will be available here';
-
 
       setTimeout(
         () => {
@@ -1351,7 +1303,6 @@ document
 
     }
   );
-
 
 </script>
 
