@@ -762,7 +762,7 @@ footer {
   href="#download"
 >
 
-  Try it
+  Try the beta
 
 </a>
 
@@ -1349,56 +1349,37 @@ All from one compact operating interface.
      ========================================================== -->
 
 <section id="download">
-
-
 <div class="cta">
-
-<h2>
-
-  CAT Control is under active development.
-
-</h2>
-
-
-<p>
-
-  CAT Control is being developed and tested with the Yaesu FTDX10,
-  with a focus on faster frequency management, practical QSO tracking,
-  contest operation and direct access to useful radio controls.
-
-</p>
-
-
-<div
-  class="buttons"
-  style="justify-content:center"
->
-
-
-<button
-  class="btn primary"
-  id="notify"
->
-
-  Coming soon — Download
-
-</button>
-
-
-<a
-  class="btn secondary"
-  href="#top"
->
-
-  Back to top
-
-</a>
-
-
+  <div class="eyebrow">Public beta · 0.1.0-beta.1</div>
+  <h2>Help shape CAT Control.</h2>
+  <p>Try the beta for the Yaesu FTDX10 and share your feedback.
+  This is an early test release: bugs and changes are expected.</p>
+  <p><strong>Windows · 64-bit · ZIP download · 46.1 MiB</strong><br>
+  No Python installation required.</p>
+  <div class="buttons" style="justify-content:center">
+    <a class="btn primary" href="https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.1/CAT-Control.zip">Download beta for Windows</a>
+    <a class="btn secondary" href="mailto:nilton.proton@gmail.com?subject=CAT%20Control%200.1.0-beta.1%20feedback">Send feedback</a>
+  </div>
 </div>
-
+<div class="showcase" style="margin-top:24px">
+  <div class="panel">
+    <h3>Getting started</h3>
+    <ol style="padding-left:20px;line-height:1.8;color:var(--muted)">
+      <li>Download the ZIP and extract the entire CAT-Control folder.</li>
+      <li>Keep the _internal folder alongside CAT-Control.exe.</li>
+      <li>Connect your FTDX10 by USB, with its USB serial driver installed.</li>
+      <li>Run CAT-Control.exe. In SERIAL, select your radio's CAT COM port and settings matching the radio.</li>
+      <li>Try frequency marking, TO DO / DONE navigation, DSP controls and log exports.</li>
+    </ol>
+  </div>
+  <div class="panel">
+    <h3>Feedback from beta-testers</h3>
+    <p style="color:var(--muted);line-height:1.7">Please include the beta version, Windows version,
+    radio CAT settings and the steps needed to reproduce the problem. Screenshots and sample export files are welcome.</p>
+    <p style="color:var(--muted);line-height:1.7">Send bug reports and suggestions to
+    <a style="text-decoration:underline" href="mailto:nilton.proton@gmail.com">nilton.proton@gmail.com</a>.</p>
+  </div>
 </div>
-
 </section>
 
 
@@ -1435,31 +1416,7 @@ All from one compact operating interface.
 
 
 
-<script>
 
-document
-  .getElementById('notify')
-  .addEventListener(
-    'click',
-    function () {
-
-      this.textContent =
-        'Download will be available here';
-
-      setTimeout(
-        () => {
-
-          this.textContent =
-            'Coming soon — Download';
-
-        },
-        2600
-      );
-
-    }
-  );
-
-</script>
 
 
 </body>
