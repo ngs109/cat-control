@@ -23,7 +23,9 @@ The application communicates directly with the radio through its **USB CAT inter
 - Use the **< / >** navigation controls to move between stored frequencies.
 - Associate a **callsign** with a frequency to identify the station.
 
-### TO DO / DONE tracking
+### QSO status tracking
+
+Press **MARK** to store a frequency you want to revisit. Marked frequencies use **TO DO** as their pending status; **MARK** is the button used for this action.
 
 Keep track of your operating progress:
 
@@ -165,7 +167,7 @@ Please include:
 - Expected and actual behavior.
 - Screenshots or sample export files, when relevant.
 
-Feedback on frequency marking, TO DO / DONE navigation, DSP controls, and log exports is especially welcome during beta testing.
+Feedback on the MARK button, navigation between marked frequencies, QSO status tracking, DSP controls, and log exports is especially welcome during beta testing.
 
 ## Author
 
