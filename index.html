@@ -893,7 +893,7 @@ footer {
 </div>
 
 <h3>
-  QSO to do / QSO done
+  MARK / QSO DONE
 </h3>
 
 <p>
@@ -946,8 +946,8 @@ footer {
 
 <p>
 
-  Generate a Cabrillo log file for contest operation, making it
-  easier to prepare and submit your contest log.
+  Export completed contacts with sent and received exchanges. A contest
+  name is required; check the exported format against your contest rules.
 
 </p>
 
@@ -976,6 +976,29 @@ footer {
 
 </article>
 
+
+
+<article class="feature">
+  <div class="icon">EX</div>
+  <h3>Configurable contest exchanges</h3>
+  <p>Record sent and received exchanges. Configure a fixed exchange, automatic serial numbering,
+  or a combination such as <code>{serial} SC</code>. Contest mode requires a callsign, both RSTs
+  and both exchanges before confirming a contact.</p>
+</article>
+<article class="feature">
+  <div class="icon">QSO</div>
+  <h3>Confirmed contacts at a glance</h3>
+  <p>The QSO tab lists UTC date/time, callsign, frequency, mode, RSTs and exchanges.
+  Sort the columns, review the contact count, or delete a selected QSO with confirmation.
+  UNMARK removes only markers and preserves completed contacts.</p>
+</article>
+<article class="feature">
+  <div class="icon">SAVE</div>
+  <h3>Automatic QSO recovery</h3>
+  <p>Confirmed contacts are saved after changes and when closing the application.
+  Your QSO table and next serial number are restored automatically on startup,
+  with a recovery notification. No log export is required before closing.</p>
+</article>
 
 </div>
 
@@ -1350,27 +1373,32 @@ All from one compact operating interface.
 
 <section id="download">
 <div class="cta">
-  <div class="eyebrow">Public beta · 0.1.0-beta.1</div>
-  <h2>Help shape CAT Control.</h2>
+  <div class="eyebrow">Public beta · 0.1.0-beta.2</div>
+  <h2>Contest exchanges. Persistent QSO history.</h2>
   <p>Try the beta for the Yaesu FTDX10 and share your feedback.
   This is an early test release: bugs and changes are expected.</p>
-  <p><strong>Windows · 64-bit · ZIP download · 46.1 MiB</strong><br>
-  No Python installation required.</p>
+  <p><strong>Windows · 64-bit · ZIP download · 45.8 MiB</strong><br>
+  Single executable. No Python installation or companion dependency folder required.</p>
   <div class="buttons" style="justify-content:center">
-    <a class="btn primary" href="https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.1/CAT-Control.zip">Download beta for Windows</a>
-    <a class="btn secondary" href="mailto:nilton.proton@gmail.com?subject=CAT%20Control%200.1.0-beta.1%20feedback">Send feedback</a>
+    <a class="btn primary" href="https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.2/CAT-Control.zip">Download beta for Windows</a>
+    <a class="btn secondary" href="https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.2">What’s new</a>
+    <a class="btn secondary" href="mailto:nilton.proton@gmail.com?subject=CAT%20Control%200.1.0-beta.2%20feedback">Send feedback</a>
   </div>
 </div>
 <div class="showcase" style="margin-top:24px">
   <div class="panel">
     <h3>Getting started</h3>
     <ol style="padding-left:20px;line-height:1.8;color:var(--muted)">
-      <li>Download the ZIP and extract the entire CAT-Control folder.</li>
-      <li>Keep the _internal folder alongside CAT-Control.exe.</li>
+      <li>Download the ZIP and extract CAT-Control.exe into a writable folder.</li>
+      <li>When upgrading, keep your settings and QSO recovery JSON files beside the new executable.</li>
       <li>Connect your FTDX10 by USB, with its USB serial driver installed.</li>
       <li>Run CAT-Control.exe. In SERIAL, select your radio's CAT COM port and settings matching the radio.</li>
-      <li>Try frequency marking, TO DO / DONE navigation, DSP controls and log exports.</li>
+      <li>Use MARK and the navigation buttons to revisit stations, then confirm contacts with QSO DONE.</li>
+      <li>In DATA, configure your exchange and optional serial number. Enable Contest mode to require complete QSO fields.</li>
+      <li>Review confirmed contacts in QSO and export ADIF or Cabrillo as needed.</li>
     </ol>
+    <p style="color:var(--muted);line-height:1.7">Confirmed contacts are saved automatically and restored on startup.
+    Back up <code>ftdx10_qso_recovery.json</code> before moving or replacing the application folder.</p>
   </div>
   <div class="panel">
     <h3>Feedback from beta-testers</h3>
