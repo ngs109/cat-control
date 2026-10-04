@@ -874,9 +874,9 @@ footer {
 
 <p>
 
-  Move quickly backward and forward through your stored frequencies,
-  making it easy to revisit stations and activity found while scanning
-  the band.
+  Move quickly backward and forward through your stored frequencies.
+  Hover over MARK, UNMARK, &lt; or &gt; and use the mouse wheel:
+  down visits the previous mark; up visits the next.
 
 </p>
 
@@ -983,7 +983,8 @@ footer {
   <h3>Configurable contest exchanges</h3>
   <p>Record sent and received exchanges. Configure a fixed exchange, automatic serial numbering,
   or a combination such as <code>{serial} SC</code>. Contest mode requires a callsign, both RSTs
-  and both exchanges before confirming a contact.</p>
+  and both exchanges before confirming a contact. Outside contest mode, exchange fields and labels
+  are disabled and serial numbers are not incremented. DATA settings apply when leaving the tab.</p>
 </article>
 <article class="feature">
   <div class="icon">QSO</div>
@@ -996,10 +997,30 @@ footer {
   <div class="icon">SAVE</div>
   <h3>Automatic QSO recovery</h3>
   <p>Confirmed contacts are saved after changes and when closing the application.
-  Your QSO table and next serial number are restored automatically on startup,
-  with a recovery notification. No log export is required before closing.</p>
+  Your QSO table and next serial number are restored silently on startup.
+  No log export is required before closing.</p>
 </article>
 
+<article class="feature">
+  <div class="icon">USB</div>
+  <h3>Connect your way</h3>
+  <p>CONNECT/DISCONNECT is in the SERIAL tab. Enable “Connect automatically on startup”
+  to connect with your saved settings. The display shows DISCONNECTED while disconnected.
+  The radio connection closes automatically when you exit.</p>
+</article>
+<article class="feature">
+  <div class="icon">59</div>
+  <h3>Quick signal reports</h3>
+  <p>Set sent and received RSTs to 59 with separate buttons beside each field.
+  A callsign and both reports are required for every confirmed QSO;
+  contest mode also requires both exchanges.</p>
+</article>
+<article class="feature">
+  <div class="icon">TAB</div>
+  <h3>Smoother keyboard entry</h3>
+  <p>TAB and Shift+TAB skip action buttons, and the read-only QSO date/time field
+  does not receive focus. Pending DATA edits are applied when you leave the tab.</p>
+</article>
 </div>
 
 </section>
@@ -1150,8 +1171,8 @@ footer {
 
   <br>
 
-  Mark completed contacts as QSO DONE while keeping other
-  frequencies available for QSOs still to be made.
+  Enter the callsign and both RST reports, then press QSO DONE.
+  Other marked frequencies remain available for QSOs still to be made.
 
 </p>
 
@@ -1373,17 +1394,17 @@ All from one compact operating interface.
 
 <section id="download">
 <div class="cta">
-  <div class="eyebrow">Public beta · 0.1.0-beta.3</div>
-  <h2>Band limits saving fix.</h2>
-  <p>This hotfix addresses band-limit settings saving in the Windows executable.
-  Saving errors now show the file path and error message. Try the beta and share your feedback.
-  This is an early test release: bugs and changes are expected.</p>
+  <div class="eyebrow">Public beta · 0.1.0-beta.4</div>
+  <h2>Faster navigation. Easier QSO entry.</h2>
+  <p>Beta 4 adds mouse wheel navigation between marked frequencies, quick “59” buttons,
+  required callsign and RST fields, and optional automatic connection at startup.
+  This is an early beta, so bug reports and suggestions are welcome!</p>
   <p><strong>Windows · 64-bit · ZIP download · 45.8 MiB</strong><br>
   Single executable. No Python installation or companion dependency folder required.</p>
   <div class="buttons" style="justify-content:center">
-    <a class="btn primary" href="https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.3/CAT-Control.zip">Download beta for Windows</a>
-    <a class="btn secondary" href="https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.3">What’s new</a>
-    <a class="btn secondary" href="mailto:nilton.proton@gmail.com?subject=CAT%20Control%200.1.0-beta.3%20feedback">Send feedback</a>
+    <a class="btn primary" href="https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.4/CAT-Control.zip">Download beta for Windows</a>
+    <a class="btn secondary" href="https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.4">What’s new</a>
+    <a class="btn secondary" href="mailto:nilton.proton@gmail.com?subject=CAT%20Control%200.1.0-beta.4%20feedback">Send feedback</a>
   </div>
 </div>
 <div class="showcase" style="margin-top:24px">
@@ -1393,9 +1414,9 @@ All from one compact operating interface.
       <li>Download the ZIP and extract CAT-Control.exe into a writable folder.</li>
       <li>When upgrading, keep your settings and QSO recovery JSON files beside the new executable.</li>
       <li>Connect your FTDX10 by USB, with its USB serial driver installed.</li>
-      <li>Run CAT-Control.exe. In SERIAL, select your radio's CAT COM port and settings matching the radio.</li>
-      <li>Use MARK and the navigation buttons to revisit stations, then confirm contacts with QSO DONE.</li>
-      <li>In DATA, configure your exchange and optional serial number. Enable Contest mode to require complete QSO fields.</li>
+      <li>Run CAT-Control.exe. In SERIAL, select your radio's CAT COM port and matching settings, then click CONNECT. Enable “Connect automatically on startup” if desired.</li>
+      <li>Use MARK and the navigation buttons or mouse wheel to revisit stations. Enter CALLSIGN, RST S and RST R before QSO DONE; the “59” buttons fill each report individually.</li>
+      <li>For contests, enable Contest mode in DATA and configure your exchange and optional serial number. Both sent and received exchanges are then required. Settings apply when you leave DATA.</li>
       <li>Review confirmed contacts in QSO and export ADIF or Cabrillo as needed.</li>
     </ol>
     <p style="color:var(--muted);line-height:1.7">Confirmed contacts are saved automatically and restored on startup.
