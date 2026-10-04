@@ -6,7 +6,7 @@ CAT Control is a Windows desktop application for amateur radio operators using t
 
 The application communicates directly with the radio through its **USB CAT interface**, combining frequency control, QSO tracking, log exports, and frequently used DSP controls in one compact interface.
 
-**[Download the Windows beta](https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.1/CAT-Control.zip)** · **[Release notes](https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.1)** · **[Project website](https://ngs109.github.io/cat-control/)**
+**[Download the Windows beta](https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.3/CAT-Control.zip)** · **[Release notes](https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.3)** · **[Project website](https://ngs109.github.io/cat-control/)**
 
 > This is an early beta, so bug reports and suggestions are welcome!
 
@@ -62,13 +62,15 @@ These controls remain accessible while tuning and moving between stations.
 
 ## Public Beta
 
-The first public release, **v0.1.0-beta.1**, was published on **September 30, 2026**.
+The current public beta is **[v0.1.0-beta.3](https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.3)**, published on **October 3, 2026**. This hotfix addresses band-limit settings saving in the Windows executable and reports saving errors visibly.
+
+The first public release, v0.1.0-beta.1, was published on September 30, 2026.
 
 | Item | Details |
 | --- | --- |
 | Platform | Windows, 64-bit |
 | Download | `CAT-Control.zip` |
-| Download size | Approximately 46.1 MiB |
+| Download size | Approximately 45.8 MiB |
 | Application | `CAT-Control.exe` |
 | Python installation | Not required |
 | Target radio | Yaesu FTDX10 |
@@ -85,16 +87,18 @@ Download **CAT-Control.zip** from the release assets. GitHub's automatically gen
 
 ## Installation
 
-1. Download [CAT-Control.zip](https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.1/CAT-Control.zip).
-2. Extract the **entire ZIP archive** to a folder on your computer.
-3. Keep the **`_internal` folder alongside `CAT-Control.exe`**. The application depends on the files supplied in the package.
+1. Download [CAT-Control.zip](https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.3/CAT-Control.zip).
+2. Extract **CAT-Control.exe** into a writable folder on your computer.
+3. When upgrading, replace the executable and keep your existing settings and QSO recovery JSON files beside it.
 4. Install the FTDX10 USB serial driver if it is not already installed.
 5. Connect the radio to the computer by USB and turn it on.
-6. Run **`CAT-Control.exe`** from the extracted folder.
-7. In the **SERIAL** section, select the radio's CAT COM port and configure settings that match the radio.
+6. Run **CAT-Control.exe** from the extracted folder.
+7. In **SERIAL**, select the radio's CAT COM port and configure settings that match the radio.
 8. Check that the displayed frequency follows changes made on the FTDX10.
 
-**No Python installation is required.** Run the application after extraction; do not run it directly from inside the ZIP archive or copy only the executable.
+**No Python installation or companion dependency folder is required.** Do not run the application directly from inside the ZIP archive.
+
+Settings and confirmed QSO recovery files are stored beside the executable. Back up **ftdx10_qso_recovery.json** before moving or replacing the application folder.
 
 ## Typical Operating Workflow
 
@@ -130,15 +134,20 @@ Before submission, review the exported file against the contest's requirements, 
 - **Export validation:** Review ADIF and Cabrillo output before importing or submitting it, particularly for contest-specific requirements.
 - **Documentation scope:** The public repository currently contains the project website, README, and screenshot. Application source code and build instructions are not currently included.
 
-No specific reproducible defects are listed in the current release notes.
-
 ## Troubleshooting
 
 ### The application does not start
 
 - Confirm that you extracted the entire ZIP archive.
-- Check that `_internal` remains alongside `CAT-Control.exe`.
+- The current package contains a single executable; no `_internal` folder is required.
 - Run the executable from the extracted folder.
+
+### Settings or band limits are not saved
+
+- Use beta.3 or later.
+- Make sure the folder containing CAT-Control.exe allows writing files.
+- Click **SAVE BAND LIMITS** after editing the limits in **BANDS**.
+- If saving fails, the application displays the settings file path and error, even when DEBUG is disabled.
 
 ### The radio does not connect
 
