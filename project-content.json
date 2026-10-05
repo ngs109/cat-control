@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "name": "DX Hunter",
+  "description": "DX Hunter is designed to make HF band operation faster and more organized. When you find activity on a frequency, mark it instantly, continue scanning the band, and jump back to your stored frequencies whenever you want — without having to remember or write them down.",
+  "features": [
+    {
+      "title": "Mark frequencies instantly",
+      "description": "Found an active or interesting frequency? Mark it immediately and continue searching the band. No need to write frequencies down or try to remember them."
+    },
+    {
+      "title": "Navigate between marked frequencies",
+      "description": "Move quickly backward and forward through your stored frequencies. Use < TO DO and TO DO >, or hover over the marking and navigation buttons and use the mouse wheel. Navigation visits only TO DO frequencies, skipping TO SKIP and completed QSOs, and restores each frequency's saved operating mode."
+    },
+    {
+      "title": "TO DO / TO SKIP / QSO DONE",
+      "description": "Use yellow TO DO markers for stations you want to work, red TO SKIP markers for stations to skip, and green QSO DONE markers for completed contacts. TO SKIP and QSO DONE bars appear above the graph's center line. UNMARK removes either pending marker while preserving completed contacts."
+    },
+    {
+      "title": "ADIF export",
+      "description": "Generate an ADIF log file from your completed QSOs for easy import into QRZ.com and other logging software that supports the ADIF standard."
+    },
+    {
+      "title": "Cabrillo export for contests",
+      "description": "Export completed contacts with sent and received exchanges. A contest name is required; check the exported format against your contest rules."
+    },
+    {
+      "title": "Direct DSP control",
+      "description": "Adjust DNR, SHIFT and WIDTH directly from the computer interface while operating, without navigating through radio menus."
+    },
+    {
+      "title": "Configurable contest exchanges",
+      "description": "Record sent and received exchanges. Configure a fixed exchange, automatic serial numbering, or a combination such as {serial} SC . Contest mode requires a callsign, both RSTs and both exchanges before confirming a contact. Outside contest mode, exchange fields and labels are disabled and serial numbers are not incremented. DATA settings apply when leaving the tab."
+    },
+    {
+      "title": "Confirmed contacts at a glance",
+      "description": "The QSO tab lists UTC date/time, callsign, frequency, mode, RSTs and exchanges. Sort the columns, review the contact count, or delete a selected QSO with confirmation. UNMARK removes only markers and preserves completed contacts."
+    },
+    {
+      "title": "Automatic QSO recovery",
+      "description": "Confirmed contacts are saved after changes and when closing the application. Your QSO table and next serial number are restored silently on startup. No log export is required before closing."
+    },
+    {
+      "title": "Connect your way",
+      "description": "CONNECT/DISCONNECT is in the SERIAL tab. Enable “Connect automatically on startup” to connect with your saved settings. The display shows DISCONNECTED while disconnected. The radio connection closes automatically when you exit."
+    },
+    {
+      "title": "Quick signal reports",
+      "description": "Set sent and received RSTs to 59 with separate buttons beside each field. A callsign and both reports are required for every confirmed QSO; contest mode also requires both exchanges."
+    },
+    {
+      "title": "Smoother keyboard entry",
+      "description": "TAB and Shift+TAB skip action buttons, and the read-only QSO date/time field does not receive focus. Edits are applied when a field loses focus, including when switching tabs, except where an explicit SAVE button is provided. CALLSIGN, COMMENTS, MY CALLSIGN and both exchange fields use uppercase text. Tab titles also stay out of the keyboard focus sequence. Editable contact fields have a lighter background so they are easy to identify."
+    },
+    {
+      "title": "Contact comments",
+      "description": "Add notes about a station or contact using the COMMENTS field beside CALLSIGN."
+    },
+    {
+      "title": "Version and project information",
+      "description": "The ABOUT tab shows DX Hunter 1.0.0, the author and clickable yellow links to email, the website, GitHub and releases."
+    },
+    {
+      "title": "Local and UTC clocks",
+      "description": "Live clocks above the control panel show the PC's local time above UTC, with both updated every second."
+    },
+    {
+      "title": "VFO A frequency",
+      "description": "Monitor the current VFO A frequency in real time and change frequency directly from DX Hunter."
+    },
+    {
+      "title": "Operating modes",
+      "description": "Select LSB, USB, CW, FM and AM directly from the interface."
+    },
+    {
+      "title": "DNR, SHIFT and WIDTH",
+      "description": "Frequently adjusted DSP controls remain immediately accessible while you operate and move between stations."
+    }
+  ],
+  "steps": [
+    "Find activity Tune normally across the band using your FTDX10.",
+    "Press TO DO Store the current frequency and operating mode immediately and continue searching.",
+    "Keep exploring Mark as many interesting frequencies as you find.",
+    "Jump between them Use the navigation controls to move quickly through the stored frequencies.",
+    "Complete the QSO Enter the callsign and both RST reports, then press QSO DONE. Other marked frequencies remain available for QSOs still to be made."
+  ],
+  "installation": [
+    "Download the ZIP and extract dx-hunter.exe into a writable folder.",
+    "When upgrading, keep your settings and QSO recovery JSON files beside the new executable.",
+    "Connect your FTDX10 by USB, with its USB serial driver installed.",
+    "Run dx-hunter.exe. In SERIAL, select your radio's CAT COM port and matching settings, then click CONNECT. Enable “Connect automatically on startup” if desired.",
+    "Use TO DO to store a station's frequency and mode, or TO SKIP to mark a station to skip. The navigation buttons and mouse wheel revisit only TO DO stations. Enter CALLSIGN, RST S and RST R before QSO DONE; the “59” buttons fill each report individually.",
+    "For contests, enable Contest mode in DATA and configure your exchange and optional serial number. Both sent and received exchanges are then required. Settings apply when you leave DATA.",
+    "Review confirmed contacts in QSO and export ADIF or Cabrillo as needed."
+  ],
+  "screenshot": "screen001.png"
+}
