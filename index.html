@@ -788,7 +788,7 @@ footer {
 <div class="program-screenshot">
 
   <img
-    src="screen001.png"
+    src="screen001.png?v=beta6"
     alt="CAT Control application running with a Yaesu FTDX10"
   >
 
@@ -875,8 +875,9 @@ footer {
 <p>
 
   Move quickly backward and forward through your stored frequencies.
-  Hover over MARK, UNMARK, &lt; or &gt; and use the mouse wheel:
-  down visits the previous mark; up visits the next.
+  Use &lt; TO DO and TO DO &gt;, or hover over the marking and navigation buttons
+  and use the mouse wheel. Navigation visits only TO DO frequencies, skipping
+  TO SKIP and completed QSOs, and restores each frequency's saved operating mode.
 
 </p>
 
@@ -893,14 +894,15 @@ footer {
 </div>
 
 <h3>
-  MARK / QSO DONE
+  TO DO / TO SKIP / QSO DONE
 </h3>
 
 <p>
 
-  Keep frequencies marked according to their QSO status. Remember
-  which stations you still want to work and which contacts have
-  already been completed.
+  Use yellow TO DO markers for stations you want to work, red TO SKIP markers
+  for stations to skip, and green QSO DONE markers for completed contacts.
+  TO SKIP and QSO DONE bars appear above the graph's center line.
+  UNMARK removes either pending marker while preserving completed contacts.
 
 </p>
 
@@ -1020,7 +1022,9 @@ footer {
   <h3>Smoother keyboard entry</h3>
   <p>TAB and Shift+TAB skip action buttons, and the read-only QSO date/time field
   does not receive focus. Edits are applied when a field loses focus, including when switching tabs,
-  except where an explicit SAVE button is provided. CALLSIGN, COMMENTS and MY CALLSIGN use uppercase text.</p>
+  except where an explicit SAVE button is provided. CALLSIGN, COMMENTS, MY CALLSIGN and both exchange fields use uppercase text.
+  Tab titles also stay out of the keyboard focus sequence. Editable contact fields
+  have a lighter background so they are easy to identify.</p>
 </article>
 <article class="feature">
   <div class="icon">TXT</div>
@@ -1029,8 +1033,9 @@ footer {
 </article>
 <article class="feature">
   <div class="icon">UTC</div>
-  <h3>UTC at a glance</h3>
-  <p>A live UTC clock above the control panel keeps the current UTC time in view while operating.</p>
+  <h3>Local and UTC clocks</h3>
+  <p>Live clocks above the control panel show the PC's local time above UTC,
+  with both updated every second.</p>
 </article>
 </div>
 
@@ -1110,12 +1115,12 @@ footer {
 <p>
 
   <strong>
-    Press MARK
+    Press TO DO
   </strong>
 
   <br>
 
-  Store the current frequency immediately and continue searching.
+  Store the current frequency and operating mode immediately and continue searching.
 
 </p>
 
@@ -1217,7 +1222,7 @@ footer {
 
 
 <span class="gold">
-  MARK
+  TO DO
 </span>
 
 · Store the frequency instantly
@@ -1237,10 +1242,10 @@ footer {
 
 
 <span class="gold">
-  &lt; / &gt;
+  &lt; TO DO / TO DO &gt;
 </span>
 
-· Navigate through stored frequencies
+· Revisit TO DO frequencies and restore their operating mode
 
 
 <br>
@@ -1405,10 +1410,11 @@ All from one compact operating interface.
 
 <section id="download">
 <div class="cta">
-  <div class="eyebrow">Public beta · 0.1.0-beta.5</div>
-  <h2>Smoother operation. More contact details.</h2>
-  <p>Beta 5 improves typing and MARK/UNMARK responsiveness, adds a COMMENTS field beside CALLSIGN,
-  enforces uppercase entry for callsigns and comments, and displays a live UTC clock.
+  <div class="eyebrow">Public beta · 0.1.0-beta.6</div>
+  <h2>Work the stations you want. Skip the rest.</h2>
+  <p>Beta 6 adds TO DO and TO SKIP markers, navigation through pending stations with
+  frequency and mode recall, lighter contact-entry fields, uppercase exchanges,
+  and live local and UTC clocks.
   This is an early beta, so bug reports and suggestions are welcome!</p>
   <p><strong>Windows · 64-bit · ZIP download · 46.8 MiB</strong><br>
   Single executable. No Python installation or companion dependency folder required.</p>
@@ -1416,9 +1422,9 @@ All from one compact operating interface.
     Total downloads: <strong id="download-total">Loading…</strong>
   </p>
   <div class="buttons" style="justify-content:center">
-    <a class="btn primary" href="https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.5/CAT-Control.zip">Download beta for Windows</a>
-    <a class="btn secondary" href="https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.5">What’s new</a>
-    <a class="btn secondary" href="mailto:nilton.proton@gmail.com?subject=CAT%20Control%200.1.0-beta.5%20feedback">Send feedback</a>
+    <a class="btn primary" href="https://github.com/ngs109/cat-control/releases/download/v0.1.0-beta.6/CAT-Control.zip">Download beta for Windows</a>
+    <a class="btn secondary" href="https://github.com/ngs109/cat-control/releases/tag/v0.1.0-beta.6">What’s new</a>
+    <a class="btn secondary" href="mailto:nilton.proton@gmail.com?subject=CAT%20Control%200.1.0-beta.6%20feedback">Send feedback</a>
   </div>
 </div>
 <div class="showcase" style="margin-top:24px">
@@ -1429,7 +1435,7 @@ All from one compact operating interface.
       <li>When upgrading, keep your settings and QSO recovery JSON files beside the new executable.</li>
       <li>Connect your FTDX10 by USB, with its USB serial driver installed.</li>
       <li>Run CAT-Control.exe. In SERIAL, select your radio's CAT COM port and matching settings, then click CONNECT. Enable “Connect automatically on startup” if desired.</li>
-      <li>Use MARK and the navigation buttons or mouse wheel to revisit stations. Enter CALLSIGN, RST S and RST R before QSO DONE; the “59” buttons fill each report individually.</li>
+      <li>Use TO DO to store a station's frequency and mode, or TO SKIP to mark a station to skip. The navigation buttons and mouse wheel revisit only TO DO stations. Enter CALLSIGN, RST S and RST R before QSO DONE; the “59” buttons fill each report individually.</li>
       <li>For contests, enable Contest mode in DATA and configure your exchange and optional serial number. Both sent and received exchanges are then required. Settings apply when you leave DATA.</li>
       <li>Review confirmed contacts in QSO and export ADIF or Cabrillo as needed.</li>
     </ol>
