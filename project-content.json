@@ -9,11 +9,11 @@
     },
     {
       "title": "Navigate between marked frequencies",
-      "description": "Move quickly backward and forward through your stored frequencies. Use < TO DO and TO DO >, or hover over the marking and navigation buttons and use the mouse wheel. Navigation visits only TO DO frequencies, skipping TO SKIP and completed QSOs, and restores each frequency's saved operating mode."
+      "description": "Move quickly backward and forward with < TO DO and TO DO >, or use the mouse wheel over marking and navigation buttons. Navigation visits pending TO DO frequencies and restores the saved operating mode, including frequencies with previous completed QSOs."
     },
     {
       "title": "TO DO / TO SKIP / QSO DONE",
-      "description": "Use yellow TO DO markers for stations you want to work, red TO SKIP markers for stations to skip, and green QSO DONE markers for completed contacts. TO SKIP and QSO DONE bars appear above the graph's center line. UNMARK removes either pending marker while preserving completed contacts."
+      "description": "Green QSO DONE bars stay above the graph's center line. Yellow TO DO and red TO SKIP bars appear below it at the exact frequency position. Completed and pending markers can coexist. Press TO DO to prepare another contact at a completed frequency; UNMARK preserves logged contacts."
     },
     {
       "title": "ADIF export",
@@ -28,16 +28,24 @@
       "description": "Adjust DNR, SHIFT and WIDTH directly from the computer interface while operating, without navigating through radio menus."
     },
     {
+      "title": "Multiple QSOs on one frequency",
+      "description": "Log different stations on the same frequency without overwriting previous contacts. Press TO DO to prepare the next contact. The graph shows all worked callsigns in green and the pending callsign in yellow."
+    },
+    {
+      "title": "Live contest duplicate warnings",
+      "description": "In Contest Mode, a possible duplicate warning appears while typing a callsign already worked on the same band in the current contest. You can still confirm the contact when contest rules permit it. Checks do not save or refresh the log on every keystroke."
+    },
+    {
       "title": "Configurable contest exchanges",
       "description": "Record sent and received exchanges. Configure a fixed exchange, automatic serial numbering, or a combination such as {serial} SC . Contest mode requires a callsign, both RSTs and both exchanges before confirming a contact. Outside contest mode, exchange fields and labels are disabled and serial numbers are not incremented. DATA settings apply when leaving the tab."
     },
     {
       "title": "Confirmed contacts at a glance",
-      "description": "The QSO tab lists UTC date/time, callsign, frequency, mode, RSTs and exchanges. Sort the columns, review the contact count, or delete a selected QSO with confirmation. UNMARK removes only markers and preserves completed contacts."
+      "description": "The QSO tab lists every contact independently, including multiple contacts on the same frequency. Review UTC date/time, callsign, exact frequency, mode, RSTs, exchanges and comments. Sort columns or delete one selected QSO without removing other contacts at that frequency."
     },
     {
       "title": "Automatic QSO recovery",
-      "description": "Confirmed contacts are saved after changes and when closing the application. Your QSO table and next serial number are restored silently on startup. No log export is required before closing."
+      "description": "All completed contacts, frequency markers, pending contact details and the next serial number are recovered on startup. Existing recovery files migrate automatically to version 1.0.1's format. No log export is required before closing."
     },
     {
       "title": "Connect your way",
@@ -57,7 +65,7 @@
     },
     {
       "title": "Version and project information",
-      "description": "The ABOUT tab shows DX Hunter 1.0.0, the author and clickable yellow links to email, the website, GitHub and releases."
+      "description": "The ABOUT tab shows DX Hunter 1.0.1, the author and clickable yellow links to email, the website, GitHub and releases."
     },
     {
       "title": "Local and UTC clocks",
@@ -85,12 +93,13 @@
   ],
   "installation": [
     "Download the ZIP and extract dx-hunter.exe into a writable folder.",
-    "When upgrading, keep your settings and QSO recovery JSON files beside the new executable.",
+    "When upgrading to 1.0.1, back up your QSO recovery JSON file and keep all settings and recovery files beside the new executable. Previous recovery files migrate automatically; the updated format requires version 1.0.1 or later.",
     "Connect your FTDX10 by USB, with its USB serial driver installed.",
     "Run dx-hunter.exe. In SERIAL, select your radio's CAT COM port and matching settings, then click CONNECT. Enable “Connect automatically on startup” if desired.",
     "Use TO DO to store a station's frequency and mode, or TO SKIP to mark a station to skip. The navigation buttons and mouse wheel revisit only TO DO stations. Enter CALLSIGN, RST S and RST R before QSO DONE; the “59” buttons fill each report individually.",
     "For contests, enable Contest mode in DATA and configure your exchange and optional serial number. Both sent and received exchanges are then required. Settings apply when you leave DATA.",
-    "Review confirmed contacts in QSO and export ADIF or Cabrillo as needed."
+    "Review confirmed contacts in QSO and export ADIF or Cabrillo as needed.",
+    "To work another station on a frequency with completed QSOs, press TO DO. Existing contacts and their green marker remain in the log; complete the new contact with QSO DONE."
   ],
   "screenshot": "screen001.png"
 }
