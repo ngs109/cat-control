@@ -88,8 +88,8 @@
       "description": "SAVE SESSION stores completed contacts in a .dxh file for later use, including multi-day contests. LOAD SESSION restores the log and contest settings. NEW SESSION clears completed contacts. TO DO and TO SKIP markers remain independent and are preserved when loading or starting a session."
     },
     {
-      "title": "Band buttons with frequency and mode recall",
-      "description": "Select a band directly above the frequency display. Returning to a band restores its last frequency and operating mode."
+      "title": "Band buttons with default modes",
+      "description": "Select a band directly above the frequency display to restore its last frequency. Set a default mode for each band in BANDS and click SAVE BANDS. A mode saved at the target frequency takes priority over the band default. The mode is applied before the frequency."
     },
     {
       "title": "Clear pending markers separately",
@@ -113,7 +113,7 @@
     "Review confirmed contacts in LOG and export ADIF or Cabrillo as needed.",
     "To work another station on a frequency with completed QSOs, press TO DO. Existing contacts and their green marker remain in the log; complete the new contact with QSO DONE.",
     "In LOG, double-click a completed contact's UTC date/time to edit it (YYYY-MM-DD HH:MM). Use SAVE SESSION to archive completed contacts in a .dxh file, LOAD SESSION to resume them, and NEW SESSION to start an empty log. These session actions preserve TO DO and TO SKIP markers.",
-    "Use the band buttons above the frequency display to return to a band's last frequency and mode. UNMARK ALL in RADIO clears pending markers while retaining completed contacts."
+    "In BANDS, configure each band's frequency limits and default mode (LSB, USB, CW, FM or AM), then click SAVE BANDS. Band buttons restore the last frequency and use its saved mode when available, otherwise the band's default. UNMARK ALL in RADIO clears pending markers while retaining completed contacts."
   ],
   "screenshot": "screen001.png"
 }
