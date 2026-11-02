@@ -4,7 +4,7 @@ CAT control and DX tracking for the Yaesu FTdx10.
 
 Visit the **[project website](https://dx-hunter-private.nilton-proton.chatgpt.site)** for downloads, screenshots, features, demonstration video, release history, and instructions.
 
-## TX meter history — November 2, 2026 update
+## DX Hunter 1.2.0 — TX meter history
 
 The **METERS** tab, immediately after RADIO, displays 20-second histories for **POWER, SWR, ALC, ID (current), and COMP (compression)**. A two-reading moving average smooths each trace. Sampling runs only while the tab is open and enabled, with normal radio controls prioritized.
 
