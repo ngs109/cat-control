@@ -94,6 +94,14 @@
     {
       "title": "Clear pending markers separately",
       "description": "UNMARK ALL in RADIO removes TO DO and TO SKIP markers while preserving completed contacts. LOG contains completed-contact management and ADIF/Cabrillo exports; INFO follows LOG."
+    },
+    {
+      "title": "Live TX meter history",
+      "description": "The METERS tab, immediately after RADIO, shows 20-second histories for output power, SWR, ALC, drain current (ID) and speech compression (COMP). A two-reading moving average makes changes easier to follow. Reference scales estimate watts, SWR, amperes and dB; ALC stays relative. These estimates are not factory calibration."
+    },
+    {
+      "title": "More room to operate",
+      "description": "The main window now opens at up to 1280 × 800, adapting to the available screen area. Meter sampling runs only while METERS is open and enabled, sharing the CAT queue with priority for normal radio controls."
     }
   ],
   "steps": [
@@ -113,7 +121,8 @@
     "Review confirmed contacts in LOG and export ADIF or Cabrillo as needed.",
     "To work another station on a frequency with completed QSOs, press TO DO. Existing contacts and their green marker remain in the log; complete the new contact with QSO DONE.",
     "In LOG, double-click a completed contact's UTC date/time to edit it (YYYY-MM-DD HH:MM). Use SAVE SESSION to archive completed contacts in a .dxh file, LOAD SESSION to resume them, and NEW SESSION to start an empty log. These session actions preserve TO DO and TO SKIP markers.",
-    "In BANDS, configure each band's frequency limits and default mode (LSB, USB, CW, FM or AM), then click SAVE BANDS. Band buttons restore the last frequency and use its saved mode when available, otherwise the band's default. UNMARK ALL in RADIO clears pending markers while retaining completed contacts."
+    "In BANDS, configure each band's frequency limits and default mode (LSB, USB, CW, FM or AM), then click SAVE BANDS. Band buttons restore the last frequency and use its saved mode when available, otherwise the band's default. UNMARK ALL in RADIO clears pending markers while retaining completed contacts.",
+    "Open METERS and enable TX meter history to view the five transmit histories. Sampling pauses when you leave the tab. Right-hand scales marked ≈ are estimates; compare them with the radio. ALC uses a relative 0–64 reference."
   ],
   "screenshot": "screen001.png"
 }
