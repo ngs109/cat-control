@@ -9,11 +9,11 @@
     },
     {
       "title": "Navigate between marked frequencies",
-      "description": "Move quickly backward and forward with < TO DO and TO DO >, or use the mouse wheel over marking and navigation buttons. Navigation visits pending TO DO frequencies and restores the saved operating mode, including frequencies with previous completed QSOs."
+      "description": "Use the TO DO buttons or the mouse wheel on the marker side of the vertical axis. Navigation stays within the current band, visits only pending TO DO frequencies, and restores each saved operating mode. Use the wheel on the blue side for direct tuning."
     },
     {
       "title": "TO DO / TO SKIP / QSO DONE",
-      "description": "Green QSO DONE bars stay above the graph's center line. Yellow TO DO and red TO SKIP bars appear below it at the exact frequency position. Completed and pending markers can coexist. Press TO DO to prepare another contact at a completed frequency; UNMARK preserves logged contacts."
+      "description": "The blue tuning cursor sits to the left of the vertical frequency scale. Green QSO DONE, yellow TO DO and red TO SKIP markers align with their exact frequencies on the right. Click a contact row to tune to the saved frequency and mode."
     },
     {
       "title": "ADIF export",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Multiple QSOs on one frequency",
-      "description": "Log different stations on the same frequency without overwriting previous contacts. Press TO DO to prepare the next contact. The graph shows all worked callsigns in green and the pending callsign in yellow."
+      "description": "Log different stations on the same frequency without overwriting previous contacts. Press TO DO to prepare the next contact. The RADIO list keeps worked contacts and pending stations in separate rows."
     },
     {
       "title": "Live contest duplicate warnings",
@@ -65,7 +65,7 @@
     },
     {
       "title": "Version and project information",
-      "description": "The ABOUT tab shows DX Hunter 1.2.0, the author and clickable yellow links to email, the website, GitHub and releases."
+      "description": "The ABOUT tab shows the installed version, the author and clickable links to email, the website, GitHub and releases."
     },
     {
       "title": "Local and UTC clocks",
@@ -102,13 +102,21 @@
     {
       "title": "More room to operate",
       "description": "The main window now opens at up to 1280 × 800, adapting to the available screen area. Meter sampling runs only while METERS is open and enabled, sharing the CAT queue with priority for normal radio controls."
+    },
+    {
+      "title": "Antenna profiles and RF power",
+      "description": "Set RF power presets by transmit band in ANTENNAS. Choose the connected antenna in RADIO and use the RF POWER slider to adjust power in 10 W steps up to the preset."
+    },
+    {
+      "title": "QRZ lookup",
+      "description": "Open a station's QRZ.com page from RADIO and record its No QRZ Logbook status with the contact."
     }
   ],
   "steps": [
     "Find activity Tune normally across the band using your FTDX10.",
     "Press TO DO Store the current frequency and operating mode immediately and continue searching.",
     "Keep exploring Mark as many interesting frequencies as you find.",
-    "Jump between them Use the navigation controls to move quickly through the stored frequencies.",
+    "Jump between them Use the TO DO buttons or the mouse wheel on the marker side to revisit memories in the current band.",
     "Complete the QSO Enter the callsign and both RST reports, then press QSO DONE. Other marked frequencies remain available for QSOs still to be made."
   ],
   "installation": [
@@ -116,7 +124,7 @@
     "When upgrading, replace the executable and keep your existing settings and QSO recovery JSON files beside it.",
     "Connect your FTDX10 by USB, with its USB serial driver installed.",
     "Run dx-hunter.exe. In SERIAL, select your radio's CAT COM port and matching settings, then click CONNECT. Enable “Connect automatically on startup” if desired.",
-    "Use TO DO to store a station's frequency and mode, or TO SKIP to mark a station to skip. The navigation buttons and mouse wheel revisit only TO DO stations. Enter CALLSIGN, RST S and RST R before QSO DONE; the “59” buttons fill each report individually.",
+    "Use TO DO to store a frequency and mode or TO SKIP to mark a station to skip. Use the wheel on the blue side to tune and on the marker side to revisit TO DO stations in the current band. Enter CALLSIGN, RST S and RST R before QSO DONE.",
     "For contests, enable Contest mode in INFO and configure your exchange and optional serial number. Both sent and received exchanges are then required. Settings apply when you leave INFO.",
     "Review confirmed contacts in LOG and export ADIF or Cabrillo as needed.",
     "To work another station on a frequency with completed QSOs, press TO DO. Existing contacts and their green marker remain in the log; complete the new contact with QSO DONE.",
