@@ -9,7 +9,7 @@
     },
     {
       "title": "Navigate between marked frequencies",
-      "description": "Use the TO DO buttons or the mouse wheel on the marker side of the vertical axis. Navigation stays within the current band, visits only pending TO DO frequencies, and restores each saved operating mode. Use the wheel on the blue side for direct tuning."
+      "description": "Use the TO DO buttons or the mouse wheel on the marker side of the vertical axis. Navigation stays within the current band, visits only pending TO DO frequencies, and restores each saved operating mode. Use the wheel on the blue side for direct tuning. Wheel up increases frequency; wheel down decreases it."
     },
     {
       "title": "TO DO / TO SKIP / QSO DONE",
@@ -132,5 +132,5 @@
     "In BANDS, configure each band's frequency limits and default mode (LSB, USB, CW, FM or AM), then click SAVE BANDS. Band buttons restore the last frequency and use its saved mode when available, otherwise the band's default. UNMARK ALL in RADIO clears pending markers while retaining completed contacts.",
     "Open METERS and enable TX meter history to view the five transmit histories. Sampling pauses when you leave the tab. Right-hand scales marked ≈ are estimates; compare them with the radio. ALC uses a relative 0–64 reference."
   ],
-  "screenshot": "screen001.png"
+  "screenshot": "screen001.png?v=1.3.2"
 }
